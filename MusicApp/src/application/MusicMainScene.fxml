@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MusicMainController">
+   <children>
+      <HBox layoutX="54.0" layoutY="77.0" prefHeight="106.0" prefWidth="483.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="65.0">
+         <children>
+            <Button fx:id="duration_0" mnemonicParsing="false" onAction="#setDuration0" prefHeight="108.0" prefWidth="68.0">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="53.0">
+                     <image>
+                        <Image url="@../images/0.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="duration_1" mnemonicParsing="false" onAction="#setDuration1" prefHeight="106.0" prefWidth="69.0">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="53.0">
+                     <image>
+                        <Image url="@../images/1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="duration_2" mnemonicParsing="false" onAction="#setDuration2" prefHeight="97.0" prefWidth="69.0">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="53.0">
+                     <image>
+                        <Image url="@../images/2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="duration_4" mnemonicParsing="false" onAction="#setDuration4" prefHeight="97.0" prefWidth="69.0">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="53.0">
+                     <image>
+                        <Image url="@../images/4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="duration_8" mnemonicParsing="false" onAction="#setDuration8" prefHeight="97.0" prefWidth="69.0">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="53.0">
+                     <image>
+                        <Image url="@../images/8.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="duration_16" mnemonicParsing="false" onAction="#setDuration16" prefHeight="97.0" prefWidth="69.0">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="53.0">
+                     <image>
+                        <Image url="@../images/16.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="duration_32" mnemonicParsing="false" onAction="#setDuration32" prefHeight="97.0" prefWidth="69.0">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="53.0">
+                     <image>
+                        <Image url="@../images/32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <GridPane hgap="19.0" layoutX="65.0" layoutY="-65.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="31.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="45.0" text="C" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="74.0" text="C#" GridPane.columnIndex="1">
+               <padding>
+                  <Insets left="11.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="45.0" text="D" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="16.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="45.0" text="D#" GridPane.columnIndex="3">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="45.0" text="E" GridPane.columnIndex="4">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="45.0" text="F" GridPane.columnIndex="5">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label text="F#" GridPane.columnIndex="6">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="45.0" text="G" GridPane.columnIndex="7">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="45.0" text="G#" GridPane.columnIndex="8">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="45.0" text="A" GridPane.columnIndex="9">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="45.0" text="A#" GridPane.columnIndex="10">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="45.0" text="B" GridPane.columnIndex="11">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <TextArea fx:id="melody" layoutX="34.0" layoutY="367.0" prefHeight="78.0" prefWidth="435.0" />
+      <Button fx:id="insert_btn" layoutX="475.0" layoutY="367.0" mnemonicParsing="false" onAction="#enterChoice" text="&lt;--" />
+      <Button fx:id="finished_btn" layoutX="270.0" layoutY="461.0" mnemonicParsing="false" onAction="#finishedBtnClick" text="Finished!" />
+      <Button fx:id="eraseLastBtn" layoutX="33.0" layoutY="458.0" mnemonicParsing="false" onAction="#eraseLast" text="Erase Last" />
+      <Button fx:id="eraseAllBtn" layoutX="116.0" layoutY="458.0" mnemonicParsing="false" onAction="#eraseAll" text="Erase All" />
+      <TextField fx:id="currentAdditionTextField" layoutX="517.0" layoutY="367.0" prefHeight="25.0" prefWidth="75.0" />
+      <Button fx:id="clear_btn" layoutX="533.0" layoutY="394.0" mnemonicParsing="false" onAction="#clearCurrentAdditionTextField" text="Clear" />
+      <Button fx:id="MajorScaleBtn" layoutX="223.0" layoutY="328.0" mnemonicParsing="false" onAction="#MajorScaleBtnClick" text="Major" />
+      <Button fx:id="MinorScaleBtn" layoutX="300.0" layoutY="328.0" mnemonicParsing="false" onAction="#MinorScaleBtnClick" text="Minor" />
+      <ComboBox fx:id="c_choicebox" layoutX="-69.0" layoutY="-49.0" onAction="#c_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="cSharp_choicebox" layoutX="22.0" layoutY="-48.0" onAction="#cSharp_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="d_choicebox" layoutX="-50.0" layoutY="-77.0" onAction="#d_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="dSharp_choicebox" layoutX="131.0" layoutY="-63.0" onAction="#dSharp_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="e_choicebox" layoutX="177.0" layoutY="-63.0" onAction="#e_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="f_choicebox" layoutX="223.0" layoutY="-63.0" onAction="#f_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="fSharp_choicebox" layoutX="269.0" layoutY="-63.0" onAction="#fSharp_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="g_choicebox" layoutX="316.0" layoutY="-63.0" onAction="#g_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="gSharp_choicebox" layoutX="363.0" layoutY="-63.0" onAction="#gSharp_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="a_choicebox" layoutX="410.0" layoutY="-63.0" onAction="#a_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="aSharp_choicebox" layoutX="457.0" layoutY="-63.0" onAction="#aSharp_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <ComboBox fx:id="b_choicebox" layoutX="504.0" layoutY="-63.0" onAction="#b_choiceEntered" prefHeight="25.0" prefWidth="0.0" />
+      <HBox layoutX="39.0" layoutY="231.0" prefHeight="60.0" prefWidth="532.0">
+         <children>
+            <Button fx:id="CBtn" mnemonicParsing="false" onAction="#CBtnClick" prefHeight="106.0" prefWidth="45.0" text="C" />
+            <Button fx:id="CSharpBtn" mnemonicParsing="false" onAction="#CSharpBtnClick" prefHeight="106.0" prefWidth="45.0" text="C#" />
+            <Button fx:id="DBtn" mnemonicParsing="false" onAction="#DBtnClick" prefHeight="106.0" prefWidth="45.0" text="D" />
+            <Button fx:id="DSharpBtn" mnemonicParsing="false" onAction="#DSharpBtnClick" prefHeight="106.0" prefWidth="45.0" text="D#" />
+            <Button fx:id="EBtn" mnemonicParsing="false" onAction="#EBtnClick" prefHeight="60.0" prefWidth="45.0" text="E" />
+            <Button fx:id="FBtn" mnemonicParsing="false" onAction="#FBtnClick" prefHeight="97.0" prefWidth="45.0" text="F" />
+            <Button fx:id="FSharpBtn" mnemonicParsing="false" onAction="#FSharpBtnClick" prefHeight="97.0" prefWidth="45.0" text="F#" />
+            <Button fx:id="GBtn" mnemonicParsing="false" onAction="#GBtnClick" prefHeight="97.0" prefWidth="45.0" text="G" />
+            <Button fx:id="GSharpBtn" mnemonicParsing="false" onAction="#GSharpBtnClick" prefHeight="97.0" prefWidth="45.0" text="G#" />
+            <Button fx:id="ABtn" mnemonicParsing="false" onAction="#ABtnClick" prefHeight="97.0" prefWidth="45.0" text="A" />
+            <Button fx:id="ASharpBtn" mnemonicParsing="false" onAction="#ASharpBtnClick" prefHeight="97.0" prefWidth="45.0" text="A#" />
+            <Button fx:id="BBtn" mnemonicParsing="false" onAction="#BBtnClick" prefHeight="97.0" prefWidth="45.0" text="B" />
+         </children>
+      </HBox>
+      <Label layoutX="167.0" layoutY="195.0" text="Octave:" />
+      <ToggleButton fx:id="Octave4Btn" layoutX="229.0" layoutY="191.0" mnemonicParsing="false" onAction="#Octave4BtnClick" prefHeight="25.0" prefWidth="69.0" selected="true" text="4">
+         <toggleGroup>
+            <ToggleGroup fx:id="octaveToggleGroup" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="Octave5Btn" layoutX="300.0" layoutY="191.0" mnemonicParsing="false" onAction="#Octave5BtnClick" prefHeight="25.0" prefWidth="69.0" text="5" toggleGroup="$octaveToggleGroup" />
+      <ToggleButton fx:id="Octave6Btn" layoutX="372.0" layoutY="191.0" mnemonicParsing="false" onAction="#Octave6BtnClick" prefHeight="25.0" prefWidth="69.0" text="6" toggleGroup="$octaveToggleGroup" />
+      <ComboBox fx:id="ScaleNote" layoutX="517.0" layoutY="328.0" onAction="#ScaleNoteSelect" prefHeight="25.0" prefWidth="75.0" />
+   </children>
+</AnchorPane>
