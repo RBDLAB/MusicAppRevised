@@ -18,11 +18,19 @@ public class Compare {
     public static String doCompare(String patA, String patB, String projectTitle){
         
         // Find the smallest duration
+<<<<<<< HEAD
         int smallestDuration = Parser.findSmallestDuration(patA.toString() + patB.toString());
         //System.out.println(smalleastDuration);
         
         List<Integer> patAInt = Parser.parse(patA, smallestDuration);
         List<Integer> patBInt = Parser.parse(patB, smallestDuration);
+=======
+        int smalleastDuration = Parser.findSmallestDuration(patA.toString() + patB.toString());
+        //System.out.println(smalleastDuration);
+        
+        List<Integer> patAInt = Parser.parse(patA, smalleastDuration);
+        List<Integer> patBInt = Parser.parse(patB, smalleastDuration);
+>>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
         List<Integer> comparison = new ArrayList<Integer>();
         
         for (int i = 0; i < Math.min(patAInt.size(), patBInt.size()); i++){
@@ -50,12 +58,19 @@ public class Compare {
 //           // do something
 //        }
         
+<<<<<<< HEAD
         String temp = Parser.parseToSmallestDuration(Arrays.toString(patAclean).replace("[", "").replace("]", ""), smallestDuration);
 
         TransformationInfo newTransformation = new TransformationInfo(title,
         		Parser.convertPatternToMidiStr(temp),
         		Parser.convertPatternToMidiStr(Parser.parseToSmallestDuration((Arrays.toString(patBclean)).replaceAll("T120,", "").replaceFirst(",", "").replace("  ", ""), smallestDuration)),
         		patA,
+=======
+        TransformationInfo newTransformation = new TransformationInfo(title,
+        		"insert new thing here",
+        		Parser.convertPatternToMidiStr((Arrays.toString(patBclean)).replaceAll("T120,", "").replaceFirst(",", "").replace("  ", "")),
+        		Parser.convertPatternToMidiStr(Arrays.toString(patAclean)),
+>>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
         		comparison.toString());
         MusicMainController.addTransformation(newTransformation);
         
