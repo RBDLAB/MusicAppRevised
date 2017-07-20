@@ -39,6 +39,7 @@ public class MusicMainController implements Initializable {
 	public static String MelodyInserted;
 	private static String scaleNote = "";
 	private static String projectTitle;
+	private static String path;
 	private static ProjectTransformations transformations;
 	/***********************************************************************************/
 
@@ -646,7 +647,7 @@ public class MusicMainController implements Initializable {
 		Stage stage = (Stage)finished_btn.getScene().getWindow();
 		PrintWriter writer = null;
 		try {
-			writer = new PrintWriter( projectTitle + ".json", "UTF-8");
+			writer = new PrintWriter(path + "/" + projectTitle + ".json", "UTF-8");
 			Gson gson = new Gson();
 			String jsonTransformations = gson.toJson(transformations);
 			writer.println(jsonTransformations);
@@ -722,6 +723,11 @@ public class MusicMainController implements Initializable {
 
 	public void setTitle(String string) {
 		projectTitle = string;
+
+	}
+	
+	public void setPath(String string) {
+		path = string;
 
 	}
 

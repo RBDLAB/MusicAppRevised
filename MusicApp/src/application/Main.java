@@ -40,6 +40,7 @@ public class Main extends Application {
 			Scene scene = new Scene(pane);
 			ProjectTransformations transformations = new ProjectTransformations(unnamed.get(1),"",""); 
 			MusicMainController musicMainController = fxmlLoader.getController();
+			musicMainController.setPath(unnamed.get(0));
 			musicMainController.setTitle(unnamed.get(1));
 			musicMainController.setTransformations(transformations);
 			primaryStage.setScene(scene);
