@@ -41,11 +41,8 @@ public class Engine {
         double i = 0;
         int j =0;
         String manipulated;
-<<<<<<< HEAD
         int bankSize = 0;
         String title = "";
-=======
->>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
         
         // Transpositions:
         for ( i = -14; i <= 14; i++){
@@ -55,7 +52,6 @@ public class Engine {
             }
         }
         
-<<<<<<< HEAD
      // Augmantation
         bankSize = patternBank.size();
         for (j = 0; j < bankSize; j++){
@@ -105,37 +101,6 @@ public class Engine {
         	title = Parser.extractTitle(patternBank.get(j));
         	patternBank.add(title + "&TonalInversion " + tonalInversion(bankPattern.toString()));
         }
-=======
-        // Augmantation
-        //for (j = 0; j < patternBank.size(); j++){
-        	//bankPattern = new Pattern(Parser.convertStringToPattern(patternBank.get(j)));
-	        for (i = 2; i < 5; i=i+2){
-	            DurationPatternTransformer durationTransformer = new DurationPatternTransformer(i);
-	            manipulated = (durationTransformer.transform(pattern)).toString();
-	            patternBank.add("Augmantation_by_" + i + " " + removeTempo(manipulated));
-	        }
-        //}
-        
-        // Diminution
-        for (i = 2; i < 5; i=i+2){
-            DurationPatternTransformer durationTransformer = new DurationPatternTransformer(1/i);
-            manipulated = (durationTransformer.transform(pattern)).toString();
-            System.out.println("manipulated.tostring = " + manipulated);
-            System.out.println("removeTempo(manipulated) = " + removeTempo(manipulated));
-            patternBank.add("Diminution_by_" + 1/i + " " + removeTempo(manipulated));
-        }
-        
-        // Inversion
-        ReversePatternTransformer rpt = new ReversePatternTransformer();
-        manipulated = (rpt.transform(pattern)).toString();
-        patternBank.add("Inversion " + removeTempo(manipulated));
-        
-        // Diatonic
-        patternBank.add("Diatonic " + diatonicTransposition(strPattern, scale, 3));
-        
-        // Tonal Inversion
-        //patternBank.add("TonalInversion" + tonalInversion(strPattern));
->>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
         
         System.out.println("End of bank");
         
@@ -166,51 +131,32 @@ public class Engine {
         String[] baseNotes = NOTES;
         String tonalPattern = splitPattern[0];
         String[] notes;
-<<<<<<< HEAD
         notes = Parser.singleChars(tonalPattern);
         String firstNote = notes[0];
         if (notes[1].matches("b|#"))
         	firstNote = notes[0] + notes[1];
-=======
-        notes = tonalPattern.split("/");
-        String firstNote = notes[2];
->>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
         int firstIndex = Arrays.asList(baseNotes).indexOf(firstNote);
         int index;
         tonalPattern = tonalPattern + " ";
         
         for(int j=1; j < splitPattern.length; j++){
-<<<<<<< HEAD
             notes = Parser.singleChars(splitPattern[j]);
             firstNote = notes[0];
             if (notes[1].matches("b|#"))
             	firstNote = notes[0] + notes[1];
             index = Arrays.asList(baseNotes).indexOf(firstNote);
             tonalPattern = tonalPattern + baseNotes[(16+firstIndex + (firstIndex - index))%16] + notes[splitPattern[j].length()-2] + notes[splitPattern[j].length()-1] + " ";
-=======
-            notes = splitPattern[j].split("/");
-            tonalPattern = tonalPattern + notes[0] + "/" + notes[1] + "/";
-            index = Arrays.asList(baseNotes).indexOf(notes[2]);
-            tonalPattern = tonalPattern + baseNotes[(firstIndex - (firstIndex - index) + 1)%7] + " ";
->>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
         }
         return tonalPattern;
     }
     
-<<<<<<< HEAD
  // Diatonic Transposition
-=======
-    // Diatonic Transposition
->>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
     public static String diatonicTransposition(String pattern, String scale, int i){
         String[] splitPattern = pattern.split(" ");
         String[] thisScale = MINOR;
         String[] notes;
         String diatonicStr = "";
-<<<<<<< HEAD
         String firstNote="";
-=======
->>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
         int noteIndex = -1;
         
         switch (scale){
@@ -220,7 +166,6 @@ public class Engine {
                 break;
         }
         
-<<<<<<< HEAD
         for(int j=0; j < splitPattern.length; j++){
             notes = Parser.singleChars(splitPattern[j]);
             firstNote = notes[0];
@@ -233,40 +178,17 @@ public class Engine {
                 diatonicStr = diatonicStr + thisScale[(noteIndex+i-1)%7] + notes[splitPattern[j].length()-2] + notes[splitPattern[j].length()-1] + " ";
         }
         return diatonicStr;
-=======
-        for(int j=1; j < splitPattern.length; j++){
-            notes = splitPattern[j].split("/");
-            noteIndex = Arrays.asList(thisScale).indexOf(notes[2]);
-            if (j == 0)
-                diatonicStr = notes[0]+ "/" + notes[1] + "/";
-            else 
-                diatonicStr = diatonicStr + notes[0] + "/" + notes[1] + "/";
-
-            diatonicStr = diatonicStr + thisScale[(noteIndex+i-1)%7] + " ";
-        }
-        return Parser.convertStringToPattern(diatonicStr);
->>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
     }
     
     public static String removeTempo(String pattern){
         String noCommas = pattern.replaceAll(",", "");
         noCommas = noCommas.replace("[", "");
         noCommas = noCommas.replace("]", "");
-<<<<<<< HEAD
         noCommas = (noCommas.replace("T120,", "")).trim();
         noCommas = (noCommas.replace("T120", "")).trim();
         noCommas = noCommas.replaceAll("  ", " ");
         String[] splitPattern = noCommas.split(" ");
         for(int i = 0; i < splitPattern.length; i++){
-=======
-        //System.out.println("noCommas , :" + noCommas);
-        noCommas = (noCommas.replace("T120,", "")).trim();
-        //System.out.println("noCommas T120 :" + noCommas);
-        noCommas = pattern.replaceAll("  ", " ");
-        String[] splitPattern = noCommas.split(" ");
-        for(int i = 0; i < splitPattern.length; i++){
-            //System.out.println("splitPattern[" + i + "] = " + splitPattern[i]);
->>>>>>> f9a5b33e7d5d26d447a0e8c4d6c53c07eb40be85
             if ("T".equals(splitPattern[i])){
                 splitPattern = Arrays.copyOfRange(splitPattern, 1, splitPattern.length);
             }
